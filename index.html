@@ -6,185 +6,240 @@
 <title>Sumit | DevOps & Middleware Engineer</title>
 
 <style>
-body {
+
+/* ===== GLOBAL ===== */
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
     font-family: 'Segoe UI', sans-serif;
-    background: #0d1117;
-    color: #e6edf3;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000000);
+    background-size:400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color:white;
 }
 
-/* HEADER TERMINAL STYLE */
-header {
-    background: linear-gradient(135deg,#0d1117,#161b22);
-    padding: 60px 20px;
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ===== HEADER ===== */
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    border-bottom: 1px solid #30363d;
 }
 
-header h1 {
-    font-size: 45px;
-    color:#58a6ff;
+header h1{
+    font-size:50px;
+    color:#00f7ff;
+    text-shadow:0 0 20px #00f7ff;
 }
 
-header p {
-    color:#8b949e;
-    font-size:18px;
+.typing{
+    font-size:20px;
+    margin-top:15px;
+    border-right:3px solid white;
+    width:0;
+    white-space:nowrap;
+    overflow:hidden;
+    animation: typing 4s steps(40,end) forwards, blink 0.8s infinite;
 }
 
-/* NAV */
-nav {
+@keyframes typing{
+    to{width:520px;}
+}
+
+@keyframes blink{
+    50%{border-color:transparent;}
+}
+
+/* ===== NAV ===== */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    padding:15px;
     text-align:center;
-    padding: 15px;
-    background:#161b22;
+    backdrop-filter:blur(10px);
 }
 
-nav a {
-    color:#58a6ff;
+nav a{
+    color:#00f7ff;
     text-decoration:none;
-    margin: 0 20px;
-    font-weight:600;
+    margin:0 20px;
+    font-weight:bold;
 }
 
-nav a:hover {
-    color:#1f6feb;
+nav a:hover{
+    color:white;
 }
 
-/* SECTIONS */
-section {
-    max-width:1100px;
-    margin:auto;
-    padding:60px 20px;
+/* ===== SECTION ===== */
+section{
+    padding:100px 10%;
 }
 
-h2 {
-    border-left: 4px solid #58a6ff;
-    padding-left:15px;
-    margin-bottom:30px;
+h2{
+    font-size:32px;
+    margin-bottom:40px;
+    color:#00f7ff;
+    text-shadow:0 0 10px #00f7ff;
 }
 
-/* CARDS */
-.card {
-    background:#161b22;
+/* ===== CARD ===== */
+.card{
+    background:rgba(0,0,0,0.6);
     padding:25px;
-    border-radius:10px;
-    margin-bottom:20px;
-    border:1px solid #30363d;
+    border-radius:15px;
+    margin-bottom:30px;
+    transition:0.4s;
+    border:1px solid #00f7ff;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #00f7ff;
+}
+
+/* ===== SKILLS GRID ===== */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+}
+
+.skill-box{
+    padding:25px;
+    text-align:center;
+    background:rgba(0,0,0,0.6);
+    border-radius:12px;
+    border:1px solid #00f7ff;
     transition:0.3s;
 }
 
-.card:hover {
-    transform:translateY(-5px);
-    border-color:#58a6ff;
+.skill-box:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px #00f7ff;
 }
 
-/* SKILLS GRID */
-.skills {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
+/* ===== TIMELINE ===== */
+.timeline{
+    border-left:3px solid #00f7ff;
+    padding-left:20px;
 }
 
-.skill-box {
-    background:#0d1117;
-    padding:20px;
-    text-align:center;
-    border-radius:8px;
-    border:1px solid #30363d;
+.timeline-item{
+    margin-bottom:40px;
 }
 
-.skill-box:hover {
-    border-color:#58a6ff;
-}
-
-/* FOOTER */
-footer {
+/* ===== FOOTER ===== */
+footer{
     text-align:center;
     padding:30px;
-    background:#161b22;
-    margin-top:40px;
+    background:black;
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Sumit</h1>
-    <p>🚀 DevOps & Middleware Engineer | WebSphere | MQ | Jenkins | Linux</p>
-</header>
-
 <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
 </nav>
 
+<header>
+<h1>Sumit</h1>
+<div class="typing">DevOps & Middleware Engineer | WebSphere | MQ | Jenkins | Linux</div>
+</header>
+
 <section id="about">
-    <h2>👨‍💻 About Me</h2>
-    <div class="card">
-        <p>
-            DevOps & Middleware Engineer with experience managing enterprise production
-            environments. Skilled in WebSphere, WebLogic, Apache, Tomcat, IBM MQ,
-            Jenkins automation, and Linux troubleshooting.
-        </p>
-    </div>
+<h2>👨‍💻 About Me</h2>
+<div class="card">
+<p>
+DevOps & Middleware Engineer with 4.5+ years of experience managing enterprise
+production environments. Specialized in IBM WebSphere, WebLogic, Apache,
+Tomcat, IBM MQ, CI/CD automation using Jenkins, and Linux system troubleshooting.
+Experienced in SSL, LDAP, deployments, JVM tuning, heap/thread dump analysis and RCA.
+</p>
+</div>
 </section>
 
 <section id="skills">
-    <h2>⚙️ DevOps Skills</h2>
-    <div class="skills">
-
-        <div class="skill-box">WebSphere</div>
-        <div class="skill-box">IBM MQ</div>
-        <div class="skill-box">Apache / IHS</div>
-        <div class="skill-box">Tomcat</div>
-        <div class="skill-box">Jenkins CI/CD</div>
-        <div class="skill-box">Linux Admin</div>
-        <div class="skill-box">Shell Scripting</div>
-        <div class="skill-box">Docker (Learning)</div>
-        <div class="skill-box">Kubernetes (Learning)</div>
-
-    </div>
+<h2>⚙️ Technical Skills</h2>
+<div class="skills">
+<div class="skill-box">IBM WebSphere</div>
+<div class="skill-box">IBM MQ</div>
+<div class="skill-box">Apache / IHS</div>
+<div class="skill-box">WebLogic</div>
+<div class="skill-box">Tomcat / JBoss</div>
+<div class="skill-box">Jenkins CI/CD</div>
+<div class="skill-box">Shell Scripting</div>
+<div class="skill-box">Linux Administration</div>
+<div class="skill-box">Docker (Learning)</div>
+<div class="skill-box">Kubernetes (Learning)</div>
+</div>
 </section>
 
 <section id="experience">
-    <h2>💼 Experience</h2>
+<h2>💼 Professional Experience</h2>
 
-    <div class="card">
-        <h3>Worldpay — DevOps Engineer</h3>
-        <p>May 2025 – Present</p>
-        <ul>
-            <li>Managed WebSphere, MQ, Apache production environments</li>
-            <li>Configured SSL, LDAP, deployments</li>
-            <li>Troubleshooting JVM & performance issues</li>
-            <li>Automated operations using Jenkins</li>
-        </ul>
-    </div>
+<div class="timeline">
 
-    <div class="card">
-        <h3>TCS — Middleware Engineer</h3>
-        <p>3 Years Experience</p>
-        <ul>
-            <li>Installed & configured WebSphere/WebLogic</li>
-            <li>Handled patching and fix packs</li>
-            <li>Performed production incident RCA</li>
-        </ul>
-    </div>
+<div class="timeline-item">
+<div class="card">
+<h3>Worldpay – DevOps & Middleware Engineer</h3>
+<p>May 2025 – Present</p>
+<ul>
+<li>Managed WebSphere, Apache, MQ in production Linux servers</li>
+<li>Configured SSL, LDAP, deployments and patching</li>
+<li>Troubleshot MQRC 2009, JVM memory & CPU issues</li>
+<li>Automated tasks using Jenkins & Shell scripting</li>
+<li>Performed RCA using thread & heap dumps</li>
+</ul>
+</div>
+</div>
 
+<div class="timeline-item">
+<div class="card">
+<h3>TCS – Middleware Engineer</h3>
+<p>3 Years Experience</p>
+<ul>
+<li>Installed & configured WebSphere, WebLogic, Apache</li>
+<li>Handled Fix Packs & vulnerability remediation</li>
+<li>Production incident management & performance tuning</li>
+</ul>
+</div>
+</div>
+
+</div>
 </section>
 
 <section id="contact">
-    <h2>📬 Contact</h2>
-    <div class="card">
-        <p>Email: yourmail@gmail.com</p>
-        <p>LinkedIn: linkedin.com/in/yourprofile</p>
-        <p>GitHub: github.com/yourusername</p>
-    </div>
+<h2>📬 Contact</h2>
+<div class="card">
+<p>Email: yourmail@gmail.com</p>
+<p>LinkedIn: linkedin.com/in/yourprofile</p>
+<p>GitHub: github.com/yourusername</p>
+</div>
 </section>
 
 <footer>
-    <p>© 2026 Sumit | DevOps Portfolio</p>
+© 2026 Sumit | DevOps Engineer Portfolio 🚀
 </footer>
 
 </body>
