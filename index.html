@@ -8,19 +8,27 @@
 <style>
 body{
 margin:0;
-font-family:system-ui;
-background:#070b14;
+font-family:Segoe UI;
 color:white;
+background:linear-gradient(120deg,#050b18,#08192b,#050b18);
+background-size:300% 300%;
+animation:bgMove 12s infinite alternate;
 overflow-x:hidden;
 }
 
-/* Floating DevOps icons */
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+/* Floating Icons */
 .icon{
 position:absolute;
-opacity:.15;
-width:80px;
-animation: float 25s linear infinite;
+width:120px;
+opacity:.2;
+animation:float 25s linear infinite;
 }
+
 @keyframes float{
 from{transform:translateY(100vh) rotate(0deg);}
 to{transform:translateY(-10vh) rotate(360deg);}
@@ -30,16 +38,17 @@ to{transform:translateY(-10vh) rotate(360deg);}
 nav{
 position:fixed;
 width:100%;
-background:rgba(0,0,0,.7);
 padding:15px;
 text-align:center;
+background:rgba(0,0,0,.6);
 backdrop-filter:blur(10px);
 }
+
 nav a{
-margin:0 20px;
+margin:0 25px;
 color:#00eaff;
-text-decoration:none;
 font-weight:bold;
+text-decoration:none;
 }
 
 /* Hero */
@@ -53,45 +62,45 @@ text-align:center;
 }
 
 header h1{
-font-size:55px;
+font-size:60px;
 color:#00eaff;
-text-shadow:0 0 20px #00eaff;
+text-shadow:0 0 30px #00eaff;
 }
 
 header p{
-font-size:20px;
-opacity:.8;
+font-size:22px;
+opacity:.9;
 }
 
 /* Glass Cards */
 .card{
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.1);
-border-radius:15px;
+background:rgba(255,255,255,.08);
 padding:30px;
-margin:20px;
+margin:20px auto;
+border-radius:18px;
+max-width:1000px;
 backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.2);
 transition:.4s;
 }
+
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px #00eaff;
+transform:translateY(-8px);
+box-shadow:0 0 30px #00eaff;
 }
 
-/* Sections */
+/* Section */
 section{
 padding:100px 10%;
-max-width:1100px;
-margin:auto;
 }
 
 h2{
 color:#00eaff;
-margin-bottom:30px;
+font-size:32px;
 }
 
-/* Skills Grid */
-.skills{
+/* Skills */
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
@@ -115,11 +124,12 @@ background:black;
 
 <body>
 
-<!-- Floating DevOps Icons -->
-<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" style="left:10%;animation-duration:20s;">
-<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" style="left:40%;animation-duration:25s;">
-<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" style="left:70%;animation-duration:30s;">
-<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" style="left:85%;animation-duration:18s;">
+<!-- BIG FLOATING DEVOPS + MIDDLEWARE ICONS -->
+<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" style="left:5%;animation-duration:20s;">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" style="left:25%;animation-duration:28s;">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" style="left:50%;animation-duration:32s;">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" style="left:70%;animation-duration:18s;">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" style="left:85%;animation-duration:26s;">
 
 <nav>
 <a href="#about">About</a>
@@ -129,34 +139,36 @@ background:black;
 </nav>
 
 <header>
-<h1>Sumit</h1>
-<p>DevOps & Middleware Engineer | WebSphere | MQ | Jenkins | Linux | Kubernetes</p>
+<h1>Sumit Shimpale</h1>
+<p>DevOps & Middleware Engineer | WebSphere | MQ | Jenkins | Kubernetes | AWS</p>
 </header>
 
 <section id="about">
 <h2>About Me</h2>
 <div class="card">
 <p>
-DevOps & Middleware Engineer with 4.5+ years of experience in enterprise
-production environments. Specialized in IBM WebSphere, Apache, WebLogic,
-IBM MQ, Jenkins CI/CD automation, Linux administration, and performance tuning.
-Currently expanding into Kubernetes, Docker, and AWS cloud-native deployments.
+DevOps & Middleware Engineer with 4+ years of experience administering enterprise application servers, middleware platforms, and automation workflows across on-premise and cloud environments. Experienced in managing IBM WebSphere, JBoss, WebLogic, Tomcat, Apache, and IBM MQ, while implementing CI/CD pipelines using Jenkins and Git-based workflows.
+</p>
+
+<p>
+Proven expertise in deployments, patching, performance tuning, JVM optimization, security configuration (SSL, LDAP, IAM), and root cause analysis using thread dumps, heap dumps, and monitoring tools. Skilled in containerization using Docker and Kubernetes, with hands-on exposure to AWS cloud environments.
 </p>
 </div>
 </section>
 
 <section id="skills">
 <h2>Technical Skills</h2>
-<div class="skills">
+<div class="grid">
 <div class="skill">WebSphere / WebLogic</div>
+<div class="skill">JBoss / Tomcat</div>
 <div class="skill">IBM MQ</div>
-<div class="skill">Apache / Tomcat</div>
+<div class="skill">Apache / IHS</div>
 <div class="skill">Jenkins CI/CD</div>
+<div class="skill">Git / GitHub</div>
 <div class="skill">Docker</div>
 <div class="skill">Kubernetes</div>
 <div class="skill">AWS EC2 / IAM</div>
 <div class="skill">Shell Scripting</div>
-<div class="skill">Linux Admin</div>
 </div>
 </section>
 
@@ -164,25 +176,24 @@ Currently expanding into Kubernetes, Docker, and AWS cloud-native deployments.
 <h2>Professional Experience</h2>
 
 <div class="card">
-<h3>Worldpay — DevOps & Middleware Engineer</h3>
-<p>May 2025 – Present</p>
+<h3>Worldpay – DevOps & Middleware Engineer</h3>
 <ul>
-<li>Managed WebSphere, Apache, MQ in production Linux servers</li>
-<li>Built Jenkins CI/CD pipelines for automated deployments</li>
-<li>Troubleshot JVM performance and MQ connectivity issues</li>
-<li>Automated operations using shell scripting</li>
-<li>Worked on containerization POCs using Docker</li>
+<li>Managed enterprise middleware platforms ensuring high availability and performance optimization.</li>
+<li>Implemented CI/CD pipelines using Jenkins for automated deployments.</li>
+<li>Automated monitoring using shell scripting and cron scheduling.</li>
+<li>Configured SSL, LDAP, IAM security integrations.</li>
+<li>Handled critical production incidents including JVM memory issues and MQRC errors.</li>
+<li>Worked with AWS, Docker, Kubernetes for containerized deployments.</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>TCS — Middleware Engineer</h3>
-<p>3 Years Experience</p>
+<h3>TCS – Middleware Engineer</h3>
 <ul>
-<li>Installed & configured WebSphere, WebLogic, Apache</li>
-<li>Performed fix pack upgrades & vulnerability remediation</li>
-<li>Handled production incidents & RCA analysis</li>
-<li>Optimized application server performance</li>
+<li>Installed and configured WebSphere, JBoss, Apache, MQ servers.</li>
+<li>Performed fix pack upgrades, patching, and performance tuning.</li>
+<li>Executed Jenkins-based build deployments.</li>
+<li>Provided 24×7 production support and RCA.</li>
 </ul>
 </div>
 
@@ -191,14 +202,14 @@ Currently expanding into Kubernetes, Docker, and AWS cloud-native deployments.
 <section id="contact">
 <h2>Contact</h2>
 <div class="card">
-<p>Email: yourmail@gmail.com</p>
+<p>Email: sumitshimpale@gmail.com</p>
+<p>Location: Pune, India</p>
 <p>LinkedIn: linkedin.com/in/yourprofile</p>
-<p>GitHub: github.com/yourusername</p>
 </div>
 </section>
 
 <footer>
-© 2026 Sumit | DevOps Engineer Portfolio
+© 2026 Sumit | DevOps & Middleware Engineer Portfolio
 </footer>
 
 </body>
