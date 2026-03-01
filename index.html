@@ -6,144 +6,120 @@
 <title>Sumit | DevOps & Middleware Engineer</title>
 
 <style>
-
-/* ===== GLOBAL ===== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family: 'Segoe UI', sans-serif;
-    background:#0a0f1c;
-    color:white;
-    overflow-x:hidden;
+margin:0;
+font-family:system-ui;
+background:#070b14;
+color:white;
+overflow-x:hidden;
 }
 
-/* ===== FLOATING ICONS ===== */
-.floating-icons img{
-    position:absolute;
-    width:60px;
-    opacity:0.15;
-    animation: float 20s infinite linear;
+/* Floating DevOps icons */
+.icon{
+position:absolute;
+opacity:.15;
+width:80px;
+animation: float 25s linear infinite;
 }
-
 @keyframes float{
-    from{transform:translateY(100vh) rotate(0deg);}
-    to{transform:translateY(-10vh) rotate(360deg);}
+from{transform:translateY(100vh) rotate(0deg);}
+to{transform:translateY(-10vh) rotate(360deg);}
 }
 
-/* ===== NAV ===== */
+/* Navbar */
 nav{
-    position:fixed;
-    width:100%;
-    padding:15px;
-    text-align:center;
-    background:rgba(0,0,0,0.7);
-    backdrop-filter:blur(10px);
-    z-index:10;
+position:fixed;
+width:100%;
+background:rgba(0,0,0,.7);
+padding:15px;
+text-align:center;
+backdrop-filter:blur(10px);
 }
-
 nav a{
-    color:#00eaff;
-    margin:0 20px;
-    text-decoration:none;
-    font-weight:bold;
+margin:0 20px;
+color:#00eaff;
+text-decoration:none;
+font-weight:bold;
 }
 
-nav a:hover{
-    color:white;
-}
-
-/* ===== HEADER ===== */
+/* Hero */
 header{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
 }
 
 header h1{
-    font-size:55px;
-    color:#00eaff;
-    text-shadow:0 0 25px #00eaff;
+font-size:55px;
+color:#00eaff;
+text-shadow:0 0 20px #00eaff;
 }
 
 header p{
-    font-size:20px;
-    margin-top:15px;
+font-size:20px;
+opacity:.8;
 }
 
-/* ===== SECTIONS ===== */
+/* Glass Cards */
+.card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+border-radius:15px;
+padding:30px;
+margin:20px;
+backdrop-filter:blur(15px);
+transition:.4s;
+}
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #00eaff;
+}
+
+/* Sections */
 section{
-    padding:100px 10%;
+padding:100px 10%;
+max-width:1100px;
+margin:auto;
 }
 
 h2{
-    color:#00eaff;
-    margin-bottom:40px;
+color:#00eaff;
+margin-bottom:30px;
 }
 
-/* ===== GLASS CARD ===== */
-.card{
-    background:rgba(255,255,255,0.05);
-    padding:30px;
-    border-radius:15px;
-    backdrop-filter:blur(10px);
-    margin-bottom:30px;
-    border:1px solid rgba(0,234,255,0.3);
-    transition:0.4s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 25px #00eaff;
-}
-
-/* ===== SKILLS GRID ===== */
+/* Skills Grid */
 .skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
 }
 
-.skill-box{
-    background:rgba(255,255,255,0.05);
-    padding:25px;
-    border-radius:12px;
-    text-align:center;
-    border:1px solid rgba(0,234,255,0.3);
-    transition:0.3s;
+.skill{
+padding:20px;
+background:rgba(255,255,255,.05);
+border-radius:10px;
+text-align:center;
 }
 
-.skill-box:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 15px #00eaff;
-}
-
-/* ===== FOOTER ===== */
+/* Footer */
 footer{
-    text-align:center;
-    padding:30px;
-    background:#000;
+text-align:center;
+padding:30px;
+background:black;
 }
-
 </style>
 </head>
 
 <body>
 
 <!-- Floating DevOps Icons -->
-<div class="floating-icons">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" style="left:10%; animation-duration:18s;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" style="left:30%; animation-duration:22s;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" style="left:60%; animation-duration:25s;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" style="left:80%; animation-duration:20s;">
-</div>
+<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" style="left:10%;animation-duration:20s;">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" style="left:40%;animation-duration:25s;">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" style="left:70%;animation-duration:30s;">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" style="left:85%;animation-duration:18s;">
 
 <nav>
 <a href="#about">About</a>
@@ -154,69 +130,66 @@ footer{
 
 <header>
 <h1>Sumit</h1>
-<p>DevOps & Middleware Engineer | CI/CD | Docker | Kubernetes | AWS</p>
+<p>DevOps & Middleware Engineer | WebSphere | MQ | Jenkins | Linux | Kubernetes</p>
 </header>
 
 <section id="about">
-<h2>👨‍💻 About Me</h2>
+<h2>About Me</h2>
 <div class="card">
 <p>
-DevOps & Middleware Engineer with 4.5+ years of experience in enterprise production environments.
-Strong expertise in IBM WebSphere, WebLogic, Apache, IBM MQ, Jenkins CI/CD,
-Linux administration and automation scripting.
-Currently expanding into Docker, Kubernetes (EKS) and AWS cloud-native deployments.
+DevOps & Middleware Engineer with 4.5+ years of experience in enterprise
+production environments. Specialized in IBM WebSphere, Apache, WebLogic,
+IBM MQ, Jenkins CI/CD automation, Linux administration, and performance tuning.
+Currently expanding into Kubernetes, Docker, and AWS cloud-native deployments.
 </p>
 </div>
 </section>
 
 <section id="skills">
-<h2>⚙️ Technical Skills</h2>
+<h2>Technical Skills</h2>
 <div class="skills">
-<div class="skill-box">WebSphere / WebLogic</div>
-<div class="skill-box">IBM MQ</div>
-<div class="skill-box">Apache / Tomcat</div>
-<div class="skill-box">Jenkins CI/CD</div>
-<div class="skill-box">Docker Containers</div>
-<div class="skill-box">Kubernetes (EKS)</div>
-<div class="skill-box">AWS EC2 / IAM</div>
-<div class="skill-box">Shell Scripting</div>
-<div class="skill-box">Linux Admin</div>
-<div class="skill-box">Git & Automation</div>
+<div class="skill">WebSphere / WebLogic</div>
+<div class="skill">IBM MQ</div>
+<div class="skill">Apache / Tomcat</div>
+<div class="skill">Jenkins CI/CD</div>
+<div class="skill">Docker</div>
+<div class="skill">Kubernetes</div>
+<div class="skill">AWS EC2 / IAM</div>
+<div class="skill">Shell Scripting</div>
+<div class="skill">Linux Admin</div>
 </div>
 </section>
 
 <section id="experience">
-<h2>💼 DevOps Experience</h2>
+<h2>Professional Experience</h2>
 
 <div class="card">
-<h3>Worldpay – DevOps & Middleware Engineer</h3>
+<h3>Worldpay — DevOps & Middleware Engineer</h3>
 <p>May 2025 – Present</p>
 <ul>
-<li>Managed production WebSphere & MQ infrastructure on Linux</li>
+<li>Managed WebSphere, Apache, MQ in production Linux servers</li>
 <li>Built Jenkins CI/CD pipelines for automated deployments</li>
-<li>Containerized applications using Docker (POC level)</li>
-<li>Worked on Kubernetes concepts & EKS learning projects</li>
-<li>Performed SSL setup, patching, LDAP integration</li>
-<li>Handled MQRC 2009, JVM heap, CPU tuning & RCA</li>
-<li>Implemented deployment automation scripts</li>
+<li>Troubleshot JVM performance and MQ connectivity issues</li>
+<li>Automated operations using shell scripting</li>
+<li>Worked on containerization POCs using Docker</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>TCS – Middleware Engineer</h3>
-<p>3 Years</p>
+<h3>TCS — Middleware Engineer</h3>
+<p>3 Years Experience</p>
 <ul>
-<li>Installed & configured WebSphere, Apache, WebLogic</li>
-<li>Handled fix packs & security vulnerability remediation</li>
-<li>Managed production incidents & root cause analysis</li>
-<li>Performance tuning & thread/heap dump analysis</li>
+<li>Installed & configured WebSphere, WebLogic, Apache</li>
+<li>Performed fix pack upgrades & vulnerability remediation</li>
+<li>Handled production incidents & RCA analysis</li>
+<li>Optimized application server performance</li>
 </ul>
 </div>
 
 </section>
 
 <section id="contact">
-<h2>📬 Contact</h2>
+<h2>Contact</h2>
 <div class="card">
 <p>Email: yourmail@gmail.com</p>
 <p>LinkedIn: linkedin.com/in/yourprofile</p>
@@ -225,7 +198,7 @@ Currently expanding into Docker, Kubernetes (EKS) and AWS cloud-native deploymen
 </section>
 
 <footer>
-© 2026 Sumit | DevOps Engineer Portfolio 🚀
+© 2026 Sumit | DevOps Engineer Portfolio
 </footer>
 
 </body>
