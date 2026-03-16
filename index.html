@@ -1,303 +1,318 @@
-<!DOCTYPE html>
+```html
+<!doctype html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sumit | DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Sumit • DevOps Engineer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins;
+:root{
+--bg:#0b0f17;
+--card:#0f1625;
+--stroke:#1f2a40;
+--text:#e7eefc;
+--muted:#a9b4cc;
+--brand:#ff7a18;
+--brand2:#ffb703;
 }
 
 body{
-background:linear-gradient(270deg,#020617,#0f172a,#020617);
-background-size:400% 400%;
-animation:bgmove 12s ease infinite;
-color:white;
-scroll-behavior:smooth;
+margin:0;
+font-family:"Space Grotesk",sans-serif;
+background:#070b12;
+color:var(--text);
+display:flex;
+justify-content:center;
+padding:30px;
 }
 
-@keyframes bgmove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
-nav{
-position:fixed;
-top:0;
+.wrap{
+max-width:1100px;
 width:100%;
+display:grid;
+gap:22px;
+}
+
+.topbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-z-index:100;
+color:var(--muted);
 }
 
-nav h2{
-color:#38bdf8;
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#38bdf8;
+.dot{
+width:10px;
+height:10px;
+border-radius:50%;
+background:linear-gradient(135deg,var(--brand),var(--brand2));
 }
 
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
+border:1px solid var(--stroke);
+padding:35px;
+border-radius:18px;
+background:var(--card);
 }
 
 .hero h1{
-font-size:55px;
+margin:0;
+font-size:42px;
 }
 
 .hero span{
-color:#38bdf8;
+background:linear-gradient(90deg,var(--brand),var(--brand2));
+-webkit-background-clip:text;
+color:transparent;
 }
 
-#typing{
-margin-top:20px;
+.hero h2{
 font-size:18px;
-opacity:0.8;
-}
-
-section{
-padding:100px 10%;
-}
-
-.section-title{
-font-size:32px;
-margin-bottom:30px;
-text-align:center;
+color:var(--muted);
+font-weight:400;
+margin-top:10px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:1.2fr .8fr;
+gap:20px;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
-padding:30px;
-border-radius:15px;
-backdrop-filter:blur(12px);
-transition:0.3s;
+background:var(--card);
+border:1px solid var(--stroke);
+border-radius:18px;
+padding:24px;
 }
 
-.card:hover{
-transform:translateY(-10px);
-background:rgba(255,255,255,0.1);
+.card h3{
+margin-top:0;
 }
 
-.skills span{
-display:inline-block;
-background:#1e293b;
-padding:10px 15px;
-border-radius:10px;
-margin:8px;
-transition:0.3s;
+.list{
+list-style:none;
+padding:0;
+display:grid;
+gap:12px;
 }
 
-.skills span:hover{
-background:#38bdf8;
-color:black;
-}
-
-.project{
-background:rgba(255,255,255,0.05);
-padding:25px;
+.item{
+background:#1a2235;
+padding:14px;
 border-radius:12px;
-transition:0.3s;
+line-height:1.5;
 }
 
-.project:hover{
-transform:scale(1.05);
-background:rgba(255,255,255,0.1);
-}
-
-.contact a{
-display:block;
+.links a{
+display:inline-block;
+margin-right:10px;
 margin-top:10px;
-color:#38bdf8;
+padding:8px 14px;
+border-radius:8px;
 text-decoration:none;
+color:white;
+background:linear-gradient(90deg,var(--brand),var(--brand2));
+font-size:14px;
 }
 
 footer{
 text-align:center;
-padding:40px;
-opacity:0.7;
+color:var(--muted);
+font-size:12px;
+margin-top:15px;
+}
+
+@media(max-width:850px){
+.grid{
+grid-template-columns:1fr;
+}
 }
 
 </style>
+
 </head>
 
 <body>
 
-<nav>
+<main class="wrap">
 
-<h2>Sumit</h2>
-
-<div>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<div class="topbar">
+<div class="brand">
+<span class="dot"></span>
+<span>DevOps Portfolio</span>
 </div>
 
-</nav>
+<div>Linux • DevOps • Middleware</div>
+</div>
 
 
 <section class="hero">
 
-<h1>Hello I'm <span>Sumit</span></h1>
+<h1>Hello I'm <span>Sumit</span> 👋</h1>
 
-<p id="typing"></p>
+<h2>
+DevOps & Middleware Engineer with experience managing enterprise payment platforms,
+Linux infrastructure, CI/CD pipelines and automation for large scale systems.
+</h2>
+
+<div class="links">
+<a href="#">GitHub</a>
+<a href="#">LinkedIn</a>
+<a href="#">Resume</a>
+</div>
 
 </section>
 
 
-<section id="about">
 
-<h2 class="section-title">About Me</h2>
+<section class="grid">
 
 <div class="card">
 
-<p>
+<h3>⚡ Technical Expertise</h3>
 
-DevOps and Middleware engineer with 4.5+ years of experience working on
-enterprise production systems.
+<ul class="list">
 
-Experienced in Apache HTTP Server, Tomcat, WebSphere, WebLogic and Linux
-based deployments.
+<li class="item">
+<b>Version Control – Git</b><br>
+Expertise in version control systems using Git including branch creation,
+merging multiple branches, and maintaining code repositories.
+</li>
 
-Strong knowledge of CI/CD pipelines using Jenkins, containerization with
-Docker, automation using shell scripting and troubleshooting JVM issues.
+<li class="item">
+<b>Shell Scripting Automation</b><br>
+Automated routine operational and system administration tasks
+using Linux shell scripting.
+</li>
 
-</p>
+<li class="item">
+<b>Python Automation</b><br>
+Knowledge of Python scripting and automating deployments using Fabric tool.
+</li>
+
+<li class="item">
+<b>CI/CD Pipelines</b><br>
+Hands-on experience implementing Continuous Integration and Continuous
+Delivery pipelines using Jenkins.
+</li>
+
+<li class="item">
+<b>Build Tools</b><br>
+Configured Jenkins with Maven to build, test and package Java applications.
+</li>
+
+<li class="item">
+<b>Code Quality</b><br>
+Integrated SonarQube with Jenkins for continuous code inspection
+and quality analysis.
+</li>
+
+<li class="item">
+<b>Artifact Management</b><br>
+Experience using Nexus Repository Manager for storing build artifacts.
+</li>
+
+<li class="item">
+<b>Middleware Administration</b><br>
+Managing Apache HTTP Server, Tomcat, IBM WebSphere and WebLogic
+for enterprise application deployments.
+</li>
+
+<li class="item">
+<b>Configuration Management</b><br>
+Hands-on experience writing Ansible playbooks and roles for provisioning,
+configuration and deployments.
+</li>
+
+<li class="item">
+<b>Containerization</b><br>
+Created Dockerfiles and managed Docker containers
+for container-based deployments.
+</li>
+
+<li class="item">
+<b>Kubernetes</b><br>
+Managed container orchestration using Kubernetes and
+administered Kubernetes clusters for application deployments.
+</li>
+
+<li class="item">
+<b>Infrastructure Automation</b><br>
+Knowledge of provisioning infrastructure using Terraform and Packer.
+</li>
+
+<li class="item">
+<b>AWS Cloud</b><br>
+Configured and managed AWS services including EC2, VPC, AMI,
+EBS, ELB, Auto Scaling, S3 and Route53 using AWS CLI.
+</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🚀 Professional Experience</h3>
+
+<ul class="list">
+
+<li class="item">
+<b>Worldpay</b><br>
+DevOps Engineer working in payments domain managing
+CI/CD pipelines, middleware systems and Linux infrastructure.
+</li>
+
+<li class="item">
+<b>TCS</b><br>
+Middleware & DevOps Engineer responsible for application
+server management, deployments and automation.
+</li>
+
+</ul>
+
+
+<h3 style="margin-top:25px">📈 Current Focus</h3>
+
+<ul class="list">
+
+<li class="item">Kubernetes & Container Platforms</li>
+<li class="item">Cloud Native DevOps</li>
+<li class="item">Infrastructure as Code</li>
+<li class="item">Automation & Platform Engineering</li>
+
+</ul>
 
 </div>
 
 </section>
 
-
-<section id="skills">
-
-<h2 class="section-title">Skills</h2>
-
-<div class="skills">
-
-<span>Linux</span>
-<span>Apache HTTP</span>
-<span>Tomcat</span>
-<span>WebSphere</span>
-<span>WebLogic</span>
-<span>JBoss</span>
-<span>Jenkins</span>
-<span>Docker</span>
-<span>Kubernetes</span>
-<span>Git</span>
-<span>Shell Scripting</span>
-<span>SSL</span>
-<span>LDAP</span>
-
-</div>
-
-</section>
-
-
-<section id="projects">
-
-<h2 class="section-title">Projects</h2>
-
-<div class="grid">
-
-<div class="project">
-<h3>CI/CD Automation</h3>
-<p>Created Jenkins pipelines to automate application deployments.</p>
-</div>
-
-<div class="project">
-<h3>Dockerized Tomcat App</h3>
-<p>Containerized Java applications using Docker and deployed them.</p>
-</div>
-
-<div class="project">
-<h3>Middleware Automation</h3>
-<p>Automated Apache and WebSphere administration using shell scripts.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="contact">
-
-<h2 class="section-title">Contact</h2>
-
-<div class="contact">
-
-<a href="#">GitHub</a>
-<a href="#">LinkedIn</a>
-<a href="#">Email</a>
-
-</div>
-
-</section>
 
 
 <footer>
 
-© 2026 Sumit | DevOps Engineer Portfolio
+Built with ❤️ by Sumit • DevOps Engineer Portfolio
 
 </footer>
 
 
-<script>
-
-const text="DevOps Engineer | Linux | CI/CD | Docker | Middleware Specialist";
-
-let i=0;
-
-function typing(){
-
-if(i<text.length){
-
-document.getElementById("typing").innerHTML+=text.charAt(i);
-
-i++;
-
-setTimeout(typing,60);
-
-}
-
-}
-
-typing();
-
-</script>
+</main>
 
 </body>
 </html>
+```
