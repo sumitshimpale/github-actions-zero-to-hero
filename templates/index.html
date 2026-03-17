@@ -1,318 +1,113 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sumit • DevOps Engineer</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<title>DevOps Zero To Hero</title>
 
 <style>
-
-:root{
---bg:#0b0f17;
---card:#0f1625;
---stroke:#1f2a40;
---text:#e7eefc;
---muted:#a9b4cc;
---brand:#ff7a18;
---brand2:#ffb703;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-margin:0;
-font-family:"Space Grotesk",sans-serif;
-background:#070b12;
-color:var(--text);
+min-height:100vh;
 display:flex;
+align-items:center;
 justify-content:center;
-padding:30px;
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+color:#e0e0e0
 }
 
-.wrap{
-max-width:1100px;
-width:100%;
-display:grid;
-gap:22px;
-}
+.container{text-align:center;padding:2rem;max-width:640px}
 
-.topbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-color:var(--muted);
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.dot{
-width:10px;
-height:10px;
-border-radius:50%;
-background:linear-gradient(135deg,var(--brand),var(--brand2));
-}
-
-.hero{
-border:1px solid var(--stroke);
-padding:35px;
-border-radius:18px;
-background:var(--card);
-}
-
-.hero h1{
-margin:0;
-font-size:42px;
-}
-
-.hero span{
-background:linear-gradient(90deg,var(--brand),var(--brand2));
+h1{
+font-size:2.5rem;
+background:linear-gradient(90deg,#00d2ff,#7b2ff7);
 -webkit-background-clip:text;
-color:transparent;
+-webkit-text-fill-color:transparent;
+margin-bottom:.5rem
 }
 
-.hero h2{
-font-size:18px;
-color:var(--muted);
-font-weight:400;
-margin-top:10px;
+.badge{
+display:inline-block;
+margin:1rem 0;
+padding:.4rem 1.2rem;
+border:1px solid #7b2ff7;
+border-radius:999px;
+font-size:.9rem;
+color:#c4b5fd
 }
 
-.grid{
-display:grid;
-grid-template-columns:1.2fr .8fr;
-gap:20px;
+.pipeline{
+margin-bottom:1.5rem;
+font-size:.9rem;
+color:#9ca3af
+}
+
+.cards{
+display:flex;
+gap:1rem;
+justify-content:center;
+flex-wrap:wrap
 }
 
 .card{
-background:var(--card);
-border:1px solid var(--stroke);
-border-radius:18px;
-padding:24px;
-}
-
-.card h3{
-margin-top:0;
-}
-
-.list{
-list-style:none;
-padding:0;
-display:grid;
-gap:12px;
-}
-
-.item{
-background:#1a2235;
-padding:14px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.1);
 border-radius:12px;
-line-height:1.5;
+padding:1.4rem;
+min-width:150px
 }
 
-.links a{
-display:inline-block;
-margin-right:10px;
-margin-top:10px;
-padding:8px 14px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-background:linear-gradient(90deg,var(--brand),var(--brand2));
-font-size:14px;
+.card span{
+display:block;
+font-size:.7rem;
+color:#9ca3af;
+margin-bottom:.4rem;
+letter-spacing:.1em
 }
 
-footer{
-text-align:center;
-color:var(--muted);
-font-size:12px;
-margin-top:15px;
+.card strong{
+font-size:1.2rem;
+color:#f9fafb
 }
-
-@media(max-width:850px){
-.grid{
-grid-template-columns:1fr;
-}
-}
-
 </style>
-
 </head>
 
 <body>
 
-<main class="wrap">
+<div class="container">
 
-<div class="topbar">
-<div class="brand">
-<span class="dot"></span>
-<span>DevOps Portfolio</span>
+<h1>DevOps Zero To Hero [DevSecOps Live]</h1>
+<div class="badge">Josh Batch 10 (USA Edition BOOOM)</div>
+
+<div class="pipeline">
+Built • Tested • Linted • Deployed via GitHub Actions
 </div>
 
-<div>• DevOps • Middleware</div>
+<div class="cards">
+<div class="card">
+<span>Framework</span>
+<strong>Flask 3.1</strong>
 </div>
-
-
-<section class="hero">
-
-<h1>Hello I'm <span>Sumit</span> 👋</h1>
-
-<h2>
-DevOps & Middleware Engineer with experience managing enterprise payment platforms,
-Linux infrastructure, CI/CD pipelines and automation for large scale systems.
-</h2>
-
-<div class="links">
-<a href="#">GitHub</a>
-<a href="#">LinkedIn</a>
-<a href="#">Resume</a>
-</div>
-
-</section>
-
-
-
-<section class="grid">
 
 <div class="card">
-
-<h3>⚡ Technical Expertise</h3>
-
-<ul class="list">
-
-<li class="item">
-<b>Version Control – Git</b><br>
-Expertise in version control systems using Git including branch creation,
-merging multiple branches, and maintaining code repositories.
-</li>
-
-<li class="item">
-<b>Shell Scripting Automation</b><br>
-Automated routine operational and system administration tasks
-using Linux shell scripting.
-</li>
-
-<li class="item">
-<b>Python Automation</b><br>
-Knowledge of Python scripting and automating deployments using Fabric tool.
-</li>
-
-<li class="item">
-<b>CI/CD Pipelines</b><br>
-Hands-on experience implementing Continuous Integration and Continuous
-Delivery pipelines using Jenkins.
-</li>
-
-<li class="item">
-<b>Build Tools</b><br>
-Configured Jenkins with Maven to build, test and package Java applications.
-</li>
-
-<li class="item">
-<b>Code Quality</b><br>
-Integrated SonarQube with Jenkins for continuous code inspection
-and quality analysis.
-</li>
-
-<li class="item">
-<b>Artifact Management</b><br>
-Experience using Nexus Repository Manager for storing build artifacts.
-</li>
-
-<li class="item">
-<b>Middleware Administration</b><br>
-Managing Apache HTTP Server, Tomcat, IBM WebSphere and WebLogic
-for enterprise application deployments.
-</li>
-
-<li class="item">
-<b>Configuration Management</b><br>
-Hands-on experience writing Ansible playbooks and roles for provisioning,
-configuration and deployments.
-</li>
-
-<li class="item">
-<b>Containerization</b><br>
-Created Dockerfiles and managed Docker containers
-for container-based deployments.
-</li>
-
-<li class="item">
-<b>Kubernetes</b><br>
-Managed container orchestration using Kubernetes and
-administered Kubernetes clusters for application deployments.
-</li>
-
-<li class="item">
-<b>Infrastructure Automation</b><br>
-Knowledge of provisioning infrastructure using Terraform and Packer.
-</li>
-
-<li class="item">
-<b>AWS Cloud</b><br>
-Configured and managed AWS services including EC2, VPC, AMI,
-EBS, ELB, Auto Scaling, S3 and Route53 using AWS CLI.
-</li>
-
-</ul>
-
+<span>Runtime</span>
+<strong>Python 3.14</strong>
 </div>
-
-
 
 <div class="card">
-
-<h3>🚀 Professional Experience</h3>
-
-<ul class="list">
-
-<li class="item">
-<b>Worldpay</b><br>
-DevOps Engineer working in payments domain managing
-CI/CD pipelines, middleware systems and Linux infrastructure.
-</li>
-
-<li class="item">
-<b>TCS</b><br>
-Middleware & DevOps Engineer responsible for application
-server management, deployments and automation.
-</li>
-
-</ul>
-
-
-<h3 style="margin-top:25px">📈 Current Focus</h3>
-
-<ul class="list">
-
-<li class="item">Kubernetes & Container Platforms</li>
-<li class="item">Cloud Native DevOps</li>
-<li class="item">Infrastructure as Code</li>
-<li class="item">Automation & Platform Engineering</li>
-
-</ul>
-
+<span>Deploy</span>
+<strong>AWS ECS</strong>
 </div>
 
-</section>
+<div class="card">
+<span>CI/CD</span>
+<strong>GitHub Actions</strong>
+</div>
+</div>
 
-
-
-<footer>
-
-Built with ❤️ by Sumit • DevOps Engineer Portfolio
-
-</footer>
-
-
-</main>
+</div>
 
 </body>
 </html>
-```
